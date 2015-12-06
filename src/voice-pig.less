@@ -1,0 +1,53 @@
+
+@voice-pig-prefix: voice-pig;
+
+.@{voice-pig-prefix} {
+
+    &-panel {
+        position: fixed;
+        right: 0px;
+        bottom: 20px;
+        width: 60px;
+        height: 45px;
+        z-index: 10000;
+        background: url(./img/voice-pig.png) no-repeat;
+        background-size: 100% 100%;
+
+        &[data-status="play"] {
+            .@{voice-pig-prefix}-mouse {
+                -webkit-transform-origin: 0 0;
+                -webkit-animation: voice-pig-say 0.5s ease infinite;
+            }
+        }
+    }
+
+    &-mouse {
+        position: absolute;
+        left: 24px;
+        top: 32px;
+        width: 12px;
+        height: 8px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMi8wNi8xNQnybMUAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAACdklEQVQ4jaWSS0hUURjHv3PuuY/jjFdRR0HGojFfOGiUUpmUSk8IVxENPRSXaQbNQiIoIiVIwmhlKFGIuxZtSggfq6BWRURCJpLUIohQyxnuDHP/LebeYTRHR7rw3QOX7//7nXO+y0bD+5m/td73afrdIRCByHlt82HOaieITK9iPZ/Up16+6YmJZcuquNM59vBXJH6QOezEdiUgUlhSAiKmMJbYV50/QoQbYiUe9y2tWo2/o7bp9ucyRgqIbLYJNA0uGNEfgGJpn38uRQNECc4AUMfp3T3PJheGIpYtGBGFDIMuMEbLiUTaBaw9Exy5ahNZuka3o1Gac/p3+OTiYLj52Nm+V58JAAGgtr3FQ4IzEBFqhMCCxwMoAmAM4HxdKcmVMUDX8EBKGMkdoCRfi927euCky00JAFBDdcGMMwdUKRzfdJlsyVSc44lhwDkePIaCcCjYn85cI5ifCFVWleV+dQOnNA0RQweIYK8rcI7XOTkwOQcRQVcZ2g+Xjabz/hEAoLvdDc0l+fqqK7mm64CmrpGACItSokKI1O6bgkUzwEfvlgIA1BuquWxKN8zwSEpAiNTVRAwdJ1Q1Ba/0e798f3G+dCPWhgIA1N5cNsAdgMk4pnMkwDigqujV9RTc75P2cH9LWyZORgEQV4/sKZ5yQeUKx5zXi8dSwv0Rcg0F4Uv13ZkZmwpAEyOd5XWBvHlXUquqKHSGKhSGc0d33t8sv6UAAA3fbG30FxkrriRtqGN43+X5bwEA6rsYPGNKYbnwukDeh6eDXQXZZLMSALMsdDzQ6S+Wb3eVesbHB1pqs8tlLQD9mO7gt65fMZvqCrVsMwDoL4Iu2tg55+ZrAAAAAElFTkSuQmCC) no-repeat;
+        background-size: 100% 100%;
+        pointer-events: none;
+    }
+}
+
+@-webkit-keyframes voice-pig-say {
+
+    0% {
+        -webkit-transform: scaleY(1);
+    }
+
+    30% {
+        -webkit-transform: scaleY(0.3);
+    }
+
+    60% {
+        -webkit-transform: scaleY(0.8);
+    }
+
+    80% {
+        -webkit-transform: scaleY(0.4);
+    }
+}
