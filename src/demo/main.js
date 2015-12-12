@@ -20,7 +20,7 @@ define(function (require) {
 		 */
 		onchange: function(index, element, direction) {
 			// code here...
-			// console.log(index, element, direction);
+			 console.log(index, element, direction);
 		},
 		/*
 		 * 横竖屏检测
