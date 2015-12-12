@@ -98,7 +98,7 @@ define(
 
                 this.onScrollChange && this.onScrollChange({
                     top: top,
-                    target: this.main
+                    target: this.main[0]
                 });
 
                 var anchorPos = this.anchorPos;
@@ -122,7 +122,7 @@ define(
 
                 this.onAnchorChange && this.onAnchorChange({
                     top: top,
-                    target: current,
+                    target: current[0],
                     anchor: current.attr('data-anchor')
                 });
                 this.lastIndex = index;
