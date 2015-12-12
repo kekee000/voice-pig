@@ -8,8 +8,8 @@ define(function (require) {
     $('.pages').parallax({
 		direction: 'vertical', 	// horizontal (水平翻页)
 		swipeAnim: 'cover', 	// cover (切换效果)
-		drag:      false,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
-		loading:   true,		// 有无加载页
+		drag:      true,		// 是否允许拖拽 (若 false 则只有在 touchend 之后才会翻页)
+		loading:   false,		// 有无加载页
 		indicator: false,		// 有无指示点
 		arrow:     false,		// 有无指示箭头
 		/*
@@ -20,7 +20,8 @@ define(function (require) {
 		 */
 		onchange: function(index, element, direction) {
 			// code here...
-			 console.log(index, element, direction);
+			console.log(element);
+			$(element).find('.hide').removeClass('hide');
 		},
 		/*
 		 * 横竖屏检测
