@@ -7,7 +7,7 @@
 define(
     function (require) {
 
-        var CSS_URL = 'http://192.168.1.104:8848/src/voice-pig.less';
+        var CSS_URL = 'http://127.0.0.1:8848/src/voice-pig.less';
 
         function appendCSS(url) {
             var link = document.createElement("link");

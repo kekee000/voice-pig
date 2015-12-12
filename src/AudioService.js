@@ -18,7 +18,7 @@ define(
         var VOICE_SERVICE = 'http://tts.baidu.com/text2audio'
             + '?idx=1&cuid=baidu_speech_demo&cod=2&lan=zh&ctp=1&pdt=1&spd=7&per=0&vol=5&pit=5&tex=';
 
-        var VOICE_SERVICE = 'http://192.168.1.104/voice-pig/tool/demo.mp3?';
+        var VOICE_SERVICE = '//mirror.duapp.com/demo.mp3?';
 
         function audioHandler(e) {
 
