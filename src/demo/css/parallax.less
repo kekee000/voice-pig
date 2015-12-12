@@ -22,6 +22,7 @@ body {
 .default.pages {
 	transition: all ease 500ms;
 	transform: translate3d(0,0,0);
+  	-webkit-transform: translate3d(0,0,0);
 }
 .drag {
 	transition: none !important;
@@ -56,11 +57,18 @@ body {
 	background-image: url(../img/loading_sprite_white.png);
 	background-size: auto 37px;
 	animation: rotate 1s steps(12) infinite;
+  	-webkit-animation: rotate 1s steps(12) infinite;
 }
 @keyframes rotate {
     from { background-position: 0 0; }
     to { background-position: -444px 0; }
 }
+
+@-webkit-keyframes rotate {
+  from { background-position: 0 0; }
+  to { background-position: -444px 0; }
+}
+
 .parallax-h-indicator {
 	width: 100%;
 	height: 10px;
@@ -91,6 +99,7 @@ body {
 	right: 10px; top: 50%;
 	z-index: 10;
 	transform: translateY(-50%);
+  	-webkit-transform: translateY(-50%);
 	pointer-events: none;
 }
 .parallax-v-indicator ul li {
@@ -116,36 +125,44 @@ body {
 	background: url(../img/arrow.png) no-repeat;
 	background-size: 25px auto;
 	transform: translateY(-50%) rotate(-90deg);
+  	-webkit-transform: translateY(-50%) rotate(-90deg);
 }
 .vertical .parallax-arrow {
 	left: 50%; right: auto;
 	top: auto; bottom: 30px;
 	transform: translateX(-50%) rotate(0deg);
+	-webkit-transform: translateX(-50%) rotate(0deg);
 }
 .horizontal .current .parallax-arrow {
 	animation: harrow 1500ms 300ms ease infinite;
+  	-webkit-animation: harrow 1500ms 300ms ease infinite;
 }
 .vertical .current .parallax-arrow {
 	animation: varrow 1500ms 300ms ease infinite;
+  	-webkit-animation: varrow 1500ms 300ms ease infinite;
 }
 @keyframes varrow {
 	from {
 		opacity: 0;
 		transform: translate3d(-50%,10px,0);
+	  	-webkit-transform: translate3d(-50%,10px,0);
 	}
 	to {
 		opacity: 1;
 		transform: translate3d(-50%,0,0);
+	  	-webkit-transform: translate3d(-50%,0,0);
 	}
 }
 @keyframes harrow {
 	from {
 		opacity: 0;
 		transform: translate3d(0,-50%,0) rotate(-90deg);
+	  	-webkit-transform: translate3d(0,-50%,0) rotate(-90deg);
 	}
 	to {
 		opacity: 1;
 		transform: translate3d(-10px,-50%,0) rotate(-90deg);
+	  	-webkit-transform: translate3d(-10px,-50%,0) rotate(-90deg);
 	}
 }
 
@@ -154,10 +171,15 @@ body {
 .animate .front,
 .animate .back {
 	animation-timing-function: ease;
+  	-webkit-animation-timing-function: ease;
 	animation-duration: 500ms;
+  	-webkit-animation-duration: 500ms;
 	animation-iteration-count: 1;
+  	-webkit-animation-iteration-count: 1;
 	animation-delay: 0s;
+  	-webkit-animation-delay: 0s;
 	animation-fill-mode: forwards;
+  	-webkit-animation-fill-mode: forwards;
 	z-index:2;
 }
 .animate .back {
@@ -174,19 +196,23 @@ body {
 .cover.forward.vertical .front {
 	z-index: 2;
 	transform: translateY(100%);
+  	-webkit-transform: translateY(100%);
 }
 .cover.forward.vertical .back {
 	z-index: 0;
 }
 .animate.cover.forward.vertical .front {
 	animation-name: cover2top;
+  	-webkit-animation-name: cover2top;
 }
 @keyframes cover2top {
 	from {
 		transform: translateY(100%);
+	  	-webkit-transform: translateY(100%);
 	}
 	to {
 		transform: translateY(0%);
+	  	-webkit-transform: translateY(0%);
 	}
 }
 
@@ -194,19 +220,23 @@ body {
 .cover.forward.horizontal .front {
 	z-index: 2;
 	transform: translateX(100%);
+  	-webkit-transform: translateX(100%);
 }
 .cover.forward.horizontal .back {
 	z-index: 0;
 }
 .animate.cover.forward.horizontal .front {
 	animation-name: cover2left;
+  	-webkit-animation-name: cover2left;
 }
 @keyframes cover2left {
 	from {
 		transform: translateX(100%);
+	  	-webkit-transform: translateX(100%);
 	}
 	to {
 		transform: translateX(0%);
+	  	-webkit-transform: translateX(0%);
 	}
 }
 
@@ -214,19 +244,23 @@ body {
 .cover.backward.vertical .front {
 	z-index: 2;
  	transform: translateY(0%);
+  	-webkit-transform: translateY(0%);
 }
 .cover.backward.vertical .back {
 	z-index: 0;
 }
 .animate.cover.backward.vertical .front {
 	animation-name: cover2bottom;
+  	-webkit-animation-name: cover2bottom;
 }
 @keyframes cover2bottom {
 	from {
 		transform: translateY(-100%);
+	  	-webkit-transform: translateY(-100%);
 	}
 	to {
 		transform: translateY(0%);
+	  	-webkit-transform: translateY(0%);
 	}
 }
 
@@ -234,18 +268,22 @@ body {
 .cover.backward.horizontal .front {
 	z-index: 2;
  	transform: translateX(-100%);
+  	-webkit-transform: translateX(-100%);
 }
 .cover.backward.horizontal .back {
 	z-index: 0;
 }
 .animate.cover.backward.horizontal .front {
 	animation-name: cover2right;
+  	-webkit-animation-name: cover2right;
 }
 @keyframes cover2right {
 	from {
 		transform: translateX(-100%);
+	  	-webkit-transform: translateX(-100%);
 	}
 	to {
 		transform: translateX(0%);
+	  	-webkit-transform: translateX(0%);
 	}
 }
