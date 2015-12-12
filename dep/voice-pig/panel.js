@@ -27,7 +27,7 @@ define(
              * @return {panel}
              */
             init: function () {
-                appendCSS(CSS_URL);
+                //appendCSS(CSS_URL);
                 var tpl = '<div id="voice-pig-panel"'
                     + ' data-status="stop" class="voice-pig-panel" title="百度语音导航服务">'
                     + '<i class="voice-pig-mouse"></i>'

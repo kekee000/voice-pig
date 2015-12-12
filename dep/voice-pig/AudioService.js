@@ -80,7 +80,7 @@ define(
         };
 
 
-        require('observable').mixin(AudioService.prototype);
+        require('./observable').mixin(AudioService.prototype);
         return AudioService;
     }
 );
