@@ -24,12 +24,17 @@
 	section[data-id="4"] {
 		background-color: #3498db;
 	}
+	section[data-id="5"] {
+		background-color: #ff8c81;
+	}
 	.box1 {
-		width: 100px;
-		height: 200px;
-		background-color: #ecf0f1;
+		width: 100%;
+		height: 100%;
+		background: url("src/demo/css/img/step1.jpg") no-repeat;
+		background-size: cover;
 		position: absolute;
-		left: 160px; top: 126px;
+		left: 160px;
+		top: 126px;
 		-webkit-animation-delay: 500ms;
 	}
 	.box2 {
@@ -37,7 +42,8 @@
 		height: 100px;
 		background-color: #8e44ad;
 		position: absolute;
-		left: 60px; top: 226px;
+		left: 60px;
+		top: 226px;
 		-webkit-animation-delay: 700ms;
 	}
 	.box3 {
@@ -45,7 +51,8 @@
 		height: 100px;
 		background-color: #34495e;
 		position: absolute;
-		left: 160px; top: 226px;
+		left: 160px;
+		top: 226px;
 		-webkit-animation-delay: 900ms;
 	}
 	.box4 {
@@ -53,7 +60,8 @@
 		height: 50px;
 		background-color: #e74c3c;
 		position: absolute;
-		left: 185px; top: 250px;
+		left: 185px;
+		top: 250px;
 		-webkit-animation-delay: 1100ms;
 	}
 	</style>
@@ -91,6 +99,14 @@
 		<section class="page pge4">
 			<div class="box1 animated shake"></div>
 			<div class="box2 animated tada"></div>
+		</section>
+
+		<!-- 第五屏 -->
+		<section class="page">
+			<div class="box1" data-animation="slideToBottom" data-timing-function="ease-in"></div>
+			<div class="box2" data-animation="slideToTop" data-delay="300" data-timing-function="ease-out"></div>
+			<div class="box3" data-animation="slideToRight" data-delay="600" data-timing-function="linear"></div>
+			<div class="box4" data-animation="slideToLeft" data-delay="900" data-timing-function="cubic-bezier(.12,.73,.62,1.38)"></div>
 		</section>
 
 	</div>
