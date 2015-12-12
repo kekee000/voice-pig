@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="hahnzhu" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>Demo</title>
+	<link rel="stylesheet" href="/src/demo/css/parallax.less">
+	<link rel="stylesheet" href="/src/demo/css/parallax-animation.less">
+	<style>
+	/* custom */
+	body {
+		font-family: 'Helvetica', Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
+		font-size: 20px;
+		color: #584444;
+	}
+	section[data-id="1"] {
+		background-color: #B4EACF;
+	}
+	section[data-id="2"] {
+		background-color: #B4EACF;
+	}
+	section[data-id="3"] {
+		background-color: #B4EACF;
+	}
+	section[data-id="4"] {
+		background-color: #B4EACF;
+	}
+	.box1 {
+		position: absolute;
+		left: 54px; top: 58px;
+		border: 1px solid #fff;
+		padding: 7px;
+	}
+
+	.box1 img {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.box2 {
+		width: 50px;
+		height: 50px;
+		background-color: #E0818E;
+		position: absolute;
+		left: 23px; top: 360px;
+		color: #fff;
+		font-size: 30px;
+		text-align: center;
+		line-height: 50px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+	}
+	.box3 {
+		/*width: 200px;*/
+		/*height: 100px;*/
+		/*background-color: #8e44ad;*/
+		position: absolute;
+		left: 35px; top: 435px;
+	}
+
+	.box4 {
+		width: 50px;
+		height: 50px;
+		background-color: #e74c3c;
+		position: absolute;
+		left: 185px; top: 250px;
+	}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="pages">
+
+		<!-- 第一屏 -->
+		<section class="page">
+			<div class="box1" data-animation="slideToLeft" data-timing-function="ease-in">
+				<img src="src/demo/css/img/step1.jpg">
+			</div>
+			<div class="box2" data-animation="slideToRight" data-delay="300" data-timing-function="ease-out">
+				<i>1</i>
+
+			</div>
+			<div class="box3" data-animation="slideToTop" data-delay="600" data-timing-function="linear">
+				<p>准备材料：西瓜300g、西米100g</p>
+
+			</div>
+			<!--<div class="box4" data-animation="slideToLeft" data-delay="900" data-timing-function="cubic-bezier(.12,.73,.62,1.38)"></div>-->
+		</section>
+
+        <!-- 第二屏 -->
+		<section class="page">
+			<h2></h2>
+			<div class="box1" data-animation="followSlide" data-duration="1000">
+				<img src="src/demo/css/img/step2.jpg">
+			</div>
+			<div class="box2" data-animation="followSlide" data-delay="200" data-duration="1000">
+				<i>2</i>
+			</div>
+			<div class="box3" data-animation="followSlide" data-delay="400" data-duration="1000">
+				<p>将西瓜去皮（留些白瓤，有利尿作用）、切大块</p>
+			</div>
+			<!--<div class="box4" data-animation="followSlide" data-delay="600" data-duration="1000"></div>-->
+		</section>
+
+        <!-- 第三屏 -->
+		<section class="page">
+			<div class="box1" data-animation="fadeInToBottom">
+				<img src="src/demo/css/img/step3.jpg">
+			</div>
+			<div class="box2" data-animation="fadeInToTop" data-delay="200">
+				<i>3</i>
+			</div>
+			<div class="box3" data-animation="fadeInToLeft" data-delay="400">
+				<p>锅中加水烧开，倒入西米，转小火，盖上盖子煮20-25分钟，当西米呈透明色，只剩中间一点小白点，关火，盖上盖子焖3分钟</p>
+			</div>
+			<!--<div class="box4" data-animation="fadeInToRight" data-delay="600"></div>-->
+		</section>
+
+		<!-- 第四屏 -->
+		<section class="page">
+			<div class="box1" data-animation="fadeIn">
+				<img src="src/demo/css/img/step4.jpg">
+			</div>
+			<div class="box2" data-animation="fadeOut" data-delay="800">
+				<i>4</i>
+			</div>
+			<div class="box3" data-animation="fadeInToLeft" data-delay="400">
+				<p>待西米完全变透明时，用网筛捞起，过几遍凉开水，直至降温</p>
+			</div>
+		</section>
+
+		<!-- 第五屏 -->
+		<section class="page">
+			<div class="box1" data-animation="fadeIn">
+				<img src="src/demo/css/img/step5.jpg">
+			</div>
+			<div class="box2" data-animation="fadeOut" data-delay="800">
+				<i>5</i>
+			</div>
+			<div class="box3" data-animation="fadeInToLeft" data-delay="400">
+				<p>降温后的西米放入大碗中</p>
+			</div>
+		</section>
+
+		<!-- 第六屏 -->
+		<section class="page">
+			<div class="box1" data-animation="fadeIn">
+				<img src="src/demo/css/img/step6.jpg">
+			</div>
+			<div class="box2" data-animation="fadeOut" data-delay="800">
+				<i>6</i>
+			</div>
+			<div class="box3" data-animation="fadeInToLeft" data-delay="400">
+				<p>西瓜榨汁，再过滤一遍</p>
+			</div>
+		</section>
+
+		<!-- 第七屏 -->
+		<section class="page">
+			<div class="box1" data-animation="fadeIn">
+				<img src="src/demo/css/img/step7.jpg">
+			</div>
+			<div class="box2" data-animation="fadeOut" data-delay="800">
+				<i>7</i>
+			</div>
+			<div class="box3" data-animation="fadeInToLeft" data-delay="400">
+				<p>将西瓜汁倒入西米，搅拌均匀</p>
+			</div>
+		</section>
+
+		<!-- 第八屏 -->
+		<section class="page">
+			<div class="box1" data-animation="fadeIn">
+				<img src="src/demo/css/img/step7.jpg">
+			</div>
+			<div class="box2" data-animation="fadeOut" data-delay="800">
+				<i>8</i>
+			</div>
+			<div class="box3" data-animation="fadeInToLeft" data-delay="400">
+				<p>放入冰箱冷藏，浸泡15分钟以上，表面装饰水果就可以吃了</p>
+			</div>
+		</section>
+
+	</div>
+</div>
+<script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-6/esl.js"></script>
+<script src="/src/demo/zepto.min.js"></script>
+<script>
+	require.config({
+		'baseUrl': './src',
+	});
+	require(['demo/main']);
+</script>
+
+</body>
+</html>
