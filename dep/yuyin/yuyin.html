@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>语音</title>
+    <style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+    .eui-dialog-header {
+        display: none;
+    }
+
+#voice .voice_inner_html5 {
+    margin: -80px auto -20px;
+    width: 0;
+}
+
+#voice .voice_inner {
+    margin: -20px auto 0;
+    width: 300px;
+    height: 300px;
+}
+
+#voice .result {
+  min-height: 15px;
+  overflow: hidden;
+  text-align: center;
+  color: #333;
+}
+#voice .waiting {
+    color: #999;
+}
+
+#voice .eui-dialog-body {
+    position: relative;
+}
+
+#voice .voice-btn {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    margin: 90px 0 0 -52px;
+    z-index: 3;
+    cursor: pointer;
+    background: none;
+}
+
+#voice .voice-btn-text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    width: 170px;
+    color: #666;
+    position: absolute;
+    left: 50%;
+    top: 126px;
+    margin-left: -85px;
+}
+
+#voice .box {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    z-index: 2;
+    background: #35d2ff;
+    margin: 112px 0 0 -28px;
+}
+
+#voice .box_inner {
+    width: 100%;
+    height: 56px;
+    background: #fff;
+}
+
+@keyframes myfirst {
+    from {
+        border: 1px solid rgba(194,224,253,1);
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin: 90px 0 0 -50px;
+    }
+
+    to {
+        border: 1px solid rgba(194,224,253,0);
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        margin: -10px 0 0 -150px;
+    }
+}
+
+@-webkit-keyframes myfirst {
+    from {
+        border: 1px solid rgba(194,224,253,1);
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin: 90px 0 0 -50px;
+    }
+
+    to {
+        border: 1px solid rgba(194,224,253,0);
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        margin: -10px 0 0 -150px;
+    }
+}
+
+@-moz-keyframes myfirst {
+    from {
+        border: 1px solid rgba(194,224,253,1);
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin: 90px 0 0 -50px;
+    }
+
+    to {
+        border: 1px solid rgba(194,224,253,0);
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        margin: -10px 0 0 -150px;
+    }
+}
+
+@-o-keyframes myfirst {
+    from {
+        border: 1px solid rgba(194,224,253,1);
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        margin: 90px 0 0 -50px;
+    }
+
+    to {
+        border: 1px solid rgba(194,224,253,0);
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+        margin: -10px 0 0 -150px;
+    }
+}
+
+#voice .round1,#voice .round2 {
+    position: absolute;
+    border: 0 solid rgba(0,0,255,1);
+    border-radius: 200px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    -webkit-animation: myfirst 3s linear 0s infinite;
+    -moz-animation: myfirst 3s linear 0s infinite;
+    animation: myfirst 3s linear 0s infinite;
+}
+
+#voice .round2 {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+#voice .round3 {
+    position: absolute;
+    background: #c2e0fd;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+var $CONFIG = {};
+$CONFIG['paths.base'] = 'http://yuyin.baidu.com:80/'; // 根路径
+$CONFIG['paths.static'] = 'http://yuyin.baidu.com:80/resources/online/'; // 静态资源路径
+
+$CONFIG['logging.status'] = 1; // 登录状态
+</script>
+
+ <script src="./lib.js?v_743" type="text/javascript"></script>
+<script src="./detail.js?v_743"></script>
+<script type="text/javascript">
+    var service = {
+        start: function () {
+
+        },
+        stop: function () {
+
+        },
+        onResult: function (content) {
+            this.content = content;
+            console.log(content);
+        },
+        onFinish: function () {
+
+        },
+        onError: function (e) {
+            console.log(e.result);
+        },
+        onLoad: function () {
+        }
+    };
+    require(['common/widget/voice/voiceRecorder']);
+</script>
+</body>
+</html>

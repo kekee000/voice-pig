@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>会说话的猪</title>
+    <link rel="stylesheet" type="text/css" href="dep/voice-pig/voice-pig.css">
+
+    <style type="text/css">
+        body {
+            background: #eee;
+            font-size: 14px;
+            text-shadow: 1px 1px #ddd;
+        }
+        p.ask {
+            color: #333;
+        }
+        p.answer {
+            color: green;
+            text-indent: 2em;
+        }
+
+        #result {
+            max-height: 400px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+<h2>我是会说话的猪，点我和我对话吧，哈哈哈</h2>
+<div id="result">
+</div>
+
+<voice-pig id="voice" text="我会说话呦，点我有惊喜。"></voice-pig>
+<voice-pig id="voice-answer"></voice-pig>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-6/esl.js"></script>
+    <script>
+        require.config({
+            'baseUrl': './src',
+            'packages': [{
+                'name': 'voice-pig',
+                'location': '../dep/voice-pig',
+                'main': 'main'
+            }]
+        });
+        require(['voice/main']);
+    </script>
+</body>
+</html>
